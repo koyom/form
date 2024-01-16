@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>本の評価アンケート</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesomeの追加（星の評価に使用） -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -40,13 +39,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
-        // 星の評価を処理するJavaScript
         $(document).ready(function(){
             $('.btn-rating').click(function(){
                 var rating = $(this).val();
                 $('#rating').val(rating);
 
-                // 星をハイライトする
                 $('.btn-rating').removeClass('btn-warning');
                 $('.btn-rating').slice(0, rating).addClass('btn-warning');
             });
